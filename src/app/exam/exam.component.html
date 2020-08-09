@@ -1,0 +1,95 @@
+<head>
+  <style>
+  body {background-color: powderblue;}
+  h1   {color: blue;}
+  p    {color: red;}
+  </style>
+  </head>
+
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        
+        <th scope="col">Question</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td>
+            {{
+               
+                    count!=exam.questions.length? exam.questions[count].questionText: "finished"
+                    
+                
+            }}
+        </td>
+            
+      </tr>
+      
+    </tbody>
+</table>
+
+
+<style>
+  
+  #wgtmsr{
+              width: 350px;
+              text-overflow: ellipsis;
+              word-wrap: break-word;
+              white-space: pre-wrap;
+          }
+          #x{
+            width:200px;  
+            word-wrap: break-word; 
+          }
+</style>
+<script>
+  alert("nigger")
+</script>
+
+        <div class="form-group">
+            
+            <form (ngSubmit) = "clickCount()">
+             <label for="answer">Click to choose an Answer:</label>  
+            <select class="form-control" name="wgtmsr" id="wgtmsr" [(ngModel)] ="selectedValue" placeholder = "Click to choose an answer"> 
+              <option id = "x" *ngFor="let option of options" title = "{{option}}">{{option[0]}} Hover for option</option>
+              
+              
+            </select>
+            <button id = "b1" [disabled]= "selectedValue == ' '" class="btn btn-info" type = "submit"><div id = "d1">next</div></button>
+        </form>
+        </div>
+      
+      <!--
+      <h4>Click to choose an answer</h4>
+    
+      
+<mat-form-field appearance="fill">
+  <mat-label> Answer </mat-label>
+  <mat-select [(value)] ="selectedValue" (selectionChange) = "clickCount()" >
+    <mat-option *ngFor="let option of options" title = "{{option}}" value ="{{option}}" >
+      {{option}}
+    </mat-option>
+  </mat-select>
+ 
+</mat-form-field> 
+    
+-->
+
+
+<!--
+<div class="form-group">
+    <label for="college">College:</label>
+    <select class="form-control" id="college" [(ngModel)]="selectedValue" name="college_name" required>
+      <option value="college">Ajay Kumar Garg Engineering College</option>
+      <option value="others">Others- Please Specify Below</option>
+    </select>
+</div>
+  <div class="form-group" *ngIf="selectedValue == 'others'">
+    <label for="name">Enter College Name:</label>
+    <input type="text" class="form-control" id="name" ngModel name="other_college_name" required>
+  </div>
+-->

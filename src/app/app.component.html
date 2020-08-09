@@ -1,0 +1,10 @@
+<nav-bar></nav-bar>
+<ul>
+        <li *ngFor="let user of users">
+          {{ user.firstname }} {{ user.lastname }}
+        </li>
+      </ul>
+
+<div class="jumbotron">
+    <router-outlet></router-outlet>
+</div>

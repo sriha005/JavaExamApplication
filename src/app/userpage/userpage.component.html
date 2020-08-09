@@ -1,0 +1,34 @@
+
+<p>Welcome {{user.firstname}}!</p>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ExamID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Passing Score</th>
+        <th scope="col">Questions</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let examdef of examDefinition">
+        <td>{{ examdef.examId }}</td>
+        <td>{{ examdef.name }}</td>
+        <td>{{ examdef.passingScore}}</td>
+      
+        <td>
+          <form (ngSubmit)="onSubmit(examdef.examId)" >
+            <button type="submit" 
+            class="btn btn-info">Submit</button>
+          </form>
+           
+        </td>
+        <!--
+        <td *ngFor = "let question of examdef.questions">
+            {{question.questionText}}
+        </td>
+      -->
+      </tr>
+    </tbody>
+</table>
